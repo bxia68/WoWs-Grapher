@@ -8,9 +8,8 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
-    msg.reply('Pong!');
+    msg.channel.send('Pong');
   }
 });
 
-client.login('NjcyMjU2ODg0MTc4Mjg4NjQ4.XjJReg.rH7gNOJuGjUeqA0id67DtqkjN7U');
-//dddddd
+client.login('NjcyMjU2ODg0MTc4Mjg4NjQ4.XjJaHw.IabX1HBSPniVrYMq673ROwQDrCc');
