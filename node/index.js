@@ -25,12 +25,17 @@ function command(args, m) {
     console.log("Trying to acces WG API")
     request.open('GET', 'https://api.worldofwarships.com/wows/encyclopedia/ships/?application_id=2162639654e42bd90a76343ad68b3c23&nation=USA&ship_id=3666786288');
     request.onreadystatechange = function() {
-      console.log(this.readyState);
       console.log(this.status);
-      var apidata = JSON.parse(this.responseText);
+      if (this.status == 200) {
+        var apidata = JSON.parse(this.responseText);
+        m.channel.send(apidata.status);
+        var metaa = apidata.meta;
+        m.channel.send(metaa.count);
+        m.channel.send(metaa.limit);
+      }
     }
     request.send();
   }
 }
 
-client.login('discord gonna heck if i show token');
+client.login('ping me');
