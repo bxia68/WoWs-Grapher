@@ -40,4 +40,4 @@ function command(args, m) {
   }
 }
 
-client.login('NjcyMjU2ODg0MTc4Mjg4NjQ4.XjY69Q.yemn4kDr8TDAdX98uGlccjOUzHI');
+client.login('kek');
